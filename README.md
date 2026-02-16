@@ -17,6 +17,8 @@ Automated Code Reviews with CodeRabbit - https://www.coderabbit.ai/
 
 installed express@5.2.1
 
+installed @types/express@5.0.6
+
 installed cors@2.8.5
 
 installed mongoose@9.0.2
@@ -24,3 +26,5 @@ installed mongoose@9.0.2
 installed socket.io@4.8.2
 
 installed @clerk/express@1.7.60
+
+
