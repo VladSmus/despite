@@ -1,7 +1,7 @@
 # despite
 Full-Stack Realtime Chat App (Web + Backend (API) + Mobile)
 
-Usage:
+// ------ Usage: ------ //
 
 Web with React + Vite - https://vite.dev/
 
@@ -12,7 +12,8 @@ Mobile with Expo app - https://expo.dev/
 Automated Code Reviews with CodeRabbit - https://www.coderabbit.ai/
 
 
-Backend ---> Database & Backend Setup (MongoDB -https://www.mongodb.com/)
+
+// <--- Backend ---> Database & Backend Setup (MongoDB -https://www.mongodb.com/)
 
 installed express@5.2.1
 
