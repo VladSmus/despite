@@ -1,13 +1,9 @@
-import type { Response, NextFunction } from "express";
+import type { NextFunction, Response } from "express";
 import type { AuthRequest } from "../middleware/auth";
-import { User } from "../models/User";
 import { Chat } from "../models/Chat";
+import { Types } from "mongoose";
 
-export async function getChats(
-  req: AuthRequest,
-  res: Response,
-  next: NextFunction,
-) {
+export async function getChats(req: AuthRequest, res: Response, next: NextFunction) {
   try {
     const userId = req.userId;
 
@@ -17,13 +13,11 @@ export async function getChats(
       .sort({ lastMessageAt: -1 });
 
     const formattedChats = chats.map((chat) => {
-      const otherParticipant = chat.participants.find(
-        (p) => p._id.toString() !== userId,
-      );
+      const otherParticipant = chat.participants.find((p) => p._id.toString() !== userId);
 
       return {
         _id: chat._id,
-        pparticipant: otherParticipant,
+        participant: otherParticipant ?? null,
         lastMessage: chat.lastMessage,
         lastMessageAt: chat.lastMessageAt,
         createdAt: chat.createdAt,
@@ -37,16 +31,26 @@ export async function getChats(
   }
 }
 
-export async function getOrCreateChat(
-  req: AuthRequest,
-  res: Response,
-  next: NextFunction,
-) {
+export async function getOrCreateChat(req: AuthRequest, res: Response, next: NextFunction) {
   try {
     const userId = req.userId;
     const { participantId } = req.params;
 
-    // --- Check if chat already exists ---
+    if (!participantId) {
+      res.status(400).json({ message: "Participant ID is required" });
+      return;
+    }
+
+    if (!Types.ObjectId.isValid(participantId)) {
+      return res.status(400).json({ message: "Invalid participant ID" });
+    }
+
+    if (userId === participantId) {
+      res.status(400).json({ message: "Cannot create chat with yourself" });
+      return;
+    }
+
+    // check if chat already exists
     let chat = await Chat.findOne({
       participants: { $all: [userId, participantId] },
     })
@@ -59,13 +63,11 @@ export async function getOrCreateChat(
       chat = await newChat.populate("participants", "name email avatar");
     }
 
-    const otherParticipant = chat.participants.find(
-      (p: any) => p._id.toString() !== userId,
-    );
+    const otherParticipant = chat.participants.find((p: any) => p._id.toString() !== userId);
 
     res.json({
       _id: chat._id,
-      pparticipant: otherParticipant ?? null,
+      participant: otherParticipant ?? null,
       lastMessage: chat.lastMessage,
       lastMessageAt: chat.lastMessageAt,
       createdAt: chat.createdAt,

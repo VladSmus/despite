@@ -1,4 +1,4 @@
-import type { NextFunction, Response } from "express";
+import type { Response, NextFunction } from "express";
 import type { AuthRequest } from "../middleware/auth";
 import { Message } from "../models/Message";
 import { Chat } from "../models/Chat";
@@ -27,7 +27,6 @@ export async function getMessages(
       .sort({ createdAt: 1 }); // <--- to see oldest message in the upper part of chat
 
     res.json(messages);
-    
   } catch (error) {
     res.status(500);
     next(error);
