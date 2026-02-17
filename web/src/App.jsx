@@ -11,6 +11,7 @@ function App() {
   return (
     <>
       <h1>Despite here</h1>
+      {/* token with the request */}
       <SignedOut>
         <SignInButton mode="modal" />
       </SignedOut>
