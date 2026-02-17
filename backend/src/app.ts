@@ -1,0 +1,20 @@
+import express from "express";
+import cors from "cors";
+import authRoutes from "./routes/authRoutes";
+import chatRoutes from "./routes/chatRoutes";
+import messageRoutes from "./routes/messageRoutes";
+import userRoutes from "./routes/userRoutes";
+
+const app = express();
+app.use(cors()); // Configure with specific origins for production
+app.use(express.json()); // <--- parses incoming JSON request bodies and makes them available as req.body in route handlers
+
+app.get("/health", (request, response) => {
+  response.json({ status: "ok", message: "Server is running" });
+});
+// --- titile, img, some information => req.body.title ---
+app.use("/api/auth", authRoutes);
+app.use("/api/chats", chatRoutes);
+app.use("/api/messages", messageRoutes);
+app.use("/api/users", userRoutes);
+export default app;
