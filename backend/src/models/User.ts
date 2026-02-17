@@ -19,7 +19,7 @@ const UserSchema = new Schema<IUser>(
     name: {
       type: String,
       required: true,
-      trim: true, // <--- removes unnecessary spaces in string
+      trim: true,
     },
     email: {
       type: String,
@@ -34,7 +34,7 @@ const UserSchema = new Schema<IUser>(
     },
   },
   {
-    timestamps: true, // <--- for Date (createdAt, updatedAt)
+    timestamps: true,
   },
 );
 

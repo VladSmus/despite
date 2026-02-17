@@ -27,7 +27,7 @@ const ChatSchema = new Schema<IChat>(
       default: Date.now,
     },
   },
-  { timestamps: true }, // <--- for Date (createdAt, updatedAt)
+  { timestamps: true },
 );
 
 export const Chat = mongoose.model("Chat", ChatSchema);
