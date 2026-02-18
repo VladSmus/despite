@@ -137,10 +137,9 @@ export const initializeSocket = (httpServer: HttpServer) => {
     socket.on("disconnect", () => {
       onlineUsers.delete(userId);
 
-      // --- notify others
+      // notify others
       socket.broadcast.emit("user-offline", { userId });
     });
   });
-
   return io;
 };
