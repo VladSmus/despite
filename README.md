@@ -1,5 +1,5 @@
 # despite
-Full-Stack Realtime Chat App (Web + Backend (API) + Mobile)
+🚀 Full-Stack Realtime Chat App (Web + Backend (API) + Mobile) 🚀
 
 // ------ Usage: ------ //
 
@@ -9,26 +9,28 @@ Full-Stack Realtime Chat App (Web + Backend (API) + Mobile)
 
 📱 Mobile with Expo app - https://expo.dev/
 
-Automated Code Reviews with CodeRabbit - https://www.coderabbit.ai/
+🐇 Automated Code Reviews with CodeRabbit - https://www.coderabbit.ai/
 
 
 
 // <--- Backend ---> Database & Backend Setup (MongoDB -https://www.mongodb.com/) & TypeScript
 
-installed express@5.2.1
++ installed express@5.2.1
 
-installed @types/express@5.0.6
++ installed @types/express@5.0.6
 
-installed cors@2.8.5
++ installed cors@2.8.5
 
-installed mongoose@9.0.2
++ installed mongoose@9.0.2
 
-installed socket.io@4.8.2
++ installed socket.io@4.8.2
 
-installed @clerk/express@1.7.60
++ installed @clerk/express@1.7.60
 
 
 // <--- Web Frontend ---> 
 
 
-Clerk | Authentication and User Management - https://clerk.com/
++ Clerk | Authentication and User Management - https://clerk.com/
+
++ Appwrite (https://appwrite.io/) or Sevalla (https://sevalla.com/)
