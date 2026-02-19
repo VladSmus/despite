@@ -33,4 +33,4 @@
 
 + Clerk | Authentication and User Management - https://clerk.com/
 
-+ Appwrite (https://appwrite.io/) or Sevalla (https://sevalla.com/)
++ Deploy app with Appwrite (https://appwrite.io/) or Sevalla (https://sevalla.com/)
