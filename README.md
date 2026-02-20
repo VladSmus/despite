@@ -34,3 +34,10 @@
 + Clerk | Authentication and User Management - https://clerk.com/
 
 + Deploy app with Appwrite (https://appwrite.io/) or Sevalla (https://sevalla.com/)
+
+
+// <--- Mobile ---> with React Native + Nativewind
+
++ Expo go for work with phone screen simulator
+  
++ TanStack Query (https://tanstack.com/) asynchronous state management, server-state utilities and data fetching
