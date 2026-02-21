@@ -41,3 +41,7 @@
 + Expo go for work with phone screen simulator
   
 + TanStack Query (https://tanstack.com/) asynchronous state management, server-state utilities and data fetching
+
++ Sentry - Application Performance Monitoring & Error Tracking Software (https://sentry.io)
+
++ Axios is a promise-based HTTP Client for node.js and the browser (connection api to -> callback with MongoDB)
