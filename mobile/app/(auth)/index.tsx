@@ -81,7 +81,7 @@ const AuthScreen = () => {
 
         {/* --- CENTER SECTION - HERO IMG --- */}
         <View className="flex-1 justify-center items-center px-6">
-          <Image 
+          <Image  className="bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 opacity-85 rounded-full"
             source={require("../../assets/images/main.png")}
             style={{
               width: width - 48,
