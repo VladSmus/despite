@@ -8,7 +8,7 @@ import { StatusBar } from "expo-status-bar";
 import * as Sentry from "@sentry/react-native";
 
 Sentry.init({
-  dsn: "https://6fdadd14f4f8870cc9a78de5de143fec@o4510923013029888.ingest.de.sentry.io/4510923017158736",
+  dsn: "https://6c998e045dea34a424b5cdc8b375e6b4@o4509813037137920.ingest.de.sentry.io/4510696586477648",
 
   // Adds more context data to events (IP address, cookies, user, etc.)
   // For more information, visit: https://docs.sentry.io/platforms/react-native/data-management/data-collected/
