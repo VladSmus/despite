@@ -1,7 +1,7 @@
-# despite
-🚀 Full-Stack Realtime Chat App (Web + Backend (API) + Mobile) 🚀
+<h1>✨ despite </h1>
+<h2>🚀 Full-Stack Realtime Chat App (Web + Backend (API) + Mobile) 🚀</h2>
 
-// ------ Usage: ------ //
+<h3>// ------ Usage: ------ // </h3>
 
 💻 Web with React + Vite - https://vite.dev/
 
@@ -13,7 +13,7 @@
 
 
 
-// <--- Backend ---> Database & Backend Setup (MongoDB -https://www.mongodb.com/) & TypeScript
+<h3>// <--- Backend ---> Database & Backend Setup (MongoDB -https://www.mongodb.com/) & TypeScript </h3>
 
 + installed express@5.2.1
 
@@ -28,7 +28,7 @@
 + installed @clerk/express@1.7.60
 
 
-// <--- Web Frontend ---> 
+<h3>// <--- Web Frontend --->  </h3>
 
 
 + Clerk | Authentication and User Management - https://clerk.com/
@@ -36,7 +36,7 @@
 + Deploy app with Appwrite (https://appwrite.io/) or Sevalla (https://sevalla.com/)
 
 
-// <--- Mobile ---> with React Native + Nativewind
+<h3>// <--- Mobile ---> with React Native + Nativewind </h3>
 
 + Expo go for work with phone screen simulator
   
