@@ -9,9 +9,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Image } from "expo-image";
 import { Ionicons } from "@expo/vector-icons";
 import useAuthSocial from "@/hooks/useSocialAuth";
-// import { LinearGradient } from "expo-linear-gradient";
-// import { AnimatedOrb } from "@/components/AnimatedOrb";
-// import { BlurView } from "expo-blur";
+import { LinearGradient } from "expo-linear-gradient";
+import { AnimatedOrb } from "@/components/AnimatedOrb";
+import { BlurView } from "expo-blur";
 
 const { width, height } = Dimensions.get("window");
 
@@ -22,7 +22,7 @@ const AuthScreen = () => {
 
   return (
     <View className="flex-1 bg-surface-dark">
-     {/*  <View className="absolute inset-0 overflow-hidden">
+      <View className="absolute inset-0 overflow-hidden">
         <LinearGradient
           colors={["#0D0D0F", "#1A1A2E", "#16213E", "#0D0D0F"]}
           style={{ position: "absolute", width: "100%", height: "100%" }}
@@ -62,12 +62,12 @@ const AuthScreen = () => {
         <BlurView
           intensity={70}
           tint="dark"
-          style={{ postion: "absolute", width: "100%", height: "100%" }}
-        /> 
-      </View> */}
+          style={{ position: "absolute", width: "100%", height: "100%" }}
+        />
+      </View>
 
       <SafeAreaView className="flex-1">
-         {/* --- Top Section - Branding ---- */}
+        {/* --- Top Section - Branding ---- */}
         <View className="items-center pt-20">
           <Image
             source={require("../../assets/images/logo.png")}
@@ -81,7 +81,8 @@ const AuthScreen = () => {
 
         {/* --- CENTER SECTION - HERO IMG --- */}
         <View className="flex-1 justify-center items-center px-6">
-          <Image  className="bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 opacity-85 rounded-full"
+          <Image
+            className="bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 opacity-85 rounded-full"
             source={require("../../assets/images/main.png")}
             style={{
               width: width - 48,

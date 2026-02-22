@@ -28,12 +28,12 @@ const ChatsTab = () => {
     return (
       <View className="flex-1 bg-surface items-center justify-center">
         <Text className="text-6xl mb-6">❌</Text>
-        <Text className="text-red-500 text-3xl">Failed to load chats</Text>
+        <Text className="text-red-500 text-2xl">Failed to load chats</Text>
         <Pressable
           onPress={() => refetch()}
           className="mt-4 px-4 py-2 bg-primary rounded-lg"
         >
-          <Text className="text-foreground">Retry</Text>
+          <Text className="text-foreground text-xl">Retry</Text>
         </Pressable>
       </View>
     );
@@ -51,36 +51,36 @@ const ChatsTab = () => {
   //   });
   // };
 
-  // return (
-  //   <View className="flex-1 bg-surface">
-  //     <FlatList
-  //       data={chats}
-  //       keyExtractor={(item) => item._id}
-  //       renderItem={({ item }) => (
-  //         <ChatItem chat={item} onPress={() => handleChatPress(item)} />
-  //       )}
-  //       showsVerticalScrollIndicator={false}
-  //       contentInsetAdjustmentBehavior="automatic"
-  //       contentContainerStyle={{
-  //         paddingHorizontal: 20,
-  //         paddingTop: 16,
-  //         paddingBottom: 24,
-  //       }}
-  //       ListHeaderComponent={<Header />}
-  //       ListEmptyComponent={
-  //         <EmptyUI
-  //           title="No chats yet"
-  //           subtitle="Start a conversation!"
-  //           iconName="chatbubbles-outline"
-  //           iconColor="#6B6B70"
-  //           iconSize={64}
-  //           buttonLabel="New Chat"
-  //           onPressButton={() => router.push("/new-chat")}
-  //         />
-  //       }
-  //     />
-  //   </View>
-  // );
+  return (
+    <View className="flex-1 bg-surface">
+      {/* <FlatList
+        data={chats}
+        keyExtractor={(item) => item._id}
+        renderItem={({ item }) => (
+          <ChatItem chat={item} onPress={() => handleChatPress(item)} />
+        )}
+        showsVerticalScrollIndicator={false}
+        contentInsetAdjustmentBehavior="automatic"
+        contentContainerStyle={{
+          paddingHorizontal: 20,
+          paddingTop: 16,
+          paddingBottom: 24,
+        }}
+        ListHeaderComponent={<Header />}
+        ListEmptyComponent={
+          <EmptyUI
+            title="No chats yet"
+            subtitle="Start a conversation!"
+            iconName="chatbubbles-outline"
+            iconColor="#6B6B70"
+            iconSize={64}
+            buttonLabel="New Chat"
+            onPressButton={() => router.push("/new-chat")}
+          />
+        }
+      /> */}
+    </View>
+  );
 };
 
 export default ChatsTab;
