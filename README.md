@@ -1,4 +1,4 @@
-<h1>✨ despite </h1>
+<h1>✨ despite ✨ </h1>
 <h2>🚀 Full-Stack Realtime Chat App (Web + Backend (API) + Mobile) 🚀</h2>
 
 <h3>// ------ Usage: ------ // </h3>
@@ -11,6 +11,7 @@
 
 🐇 Automated Code Reviews with CodeRabbit - https://www.coderabbit.ai/
 
+------------------------------------------------------------------
 
 
 <h3>// <--- Backend ---> Database & Backend Setup (MongoDB -https://www.mongodb.com/) & TypeScript </h3>
@@ -28,6 +29,8 @@
 + installed @clerk/express@1.7.60
 
 
+------------------------------------------------------------------
+
 <h3>// <--- Web Frontend --->  </h3>
 
 
@@ -35,6 +38,8 @@
 
 + Deploy app with Appwrite (https://appwrite.io/) or Sevalla (https://sevalla.com/)
 
+
+------------------------------------------------------------------
 
 <h3>// <--- Mobile ---> with React Native + Nativewind </h3>
 
@@ -45,3 +50,7 @@
 + Sentry - Application Performance Monitoring & Error Tracking Software (https://sentry.io)
 
 + Axios is a promise-based HTTP Client for node.js and the browser (connection api to -> callback with MongoDB)
+
+  
+------------------------------------------------------------------
+
