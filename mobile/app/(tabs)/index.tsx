@@ -39,21 +39,21 @@ const ChatsTab = () => {
     );
   }
 
-  // const handleChatPress = (chat: Chat) => {
-  //   router.push({
-  //     pathname: "/chat/[id]",
-  //     params: {
-  //       id: chat._id,
-  //       participantId: chat.participant._id,
-  //       name: chat.participant.name,
-  //       avatar: chat.participant.avatar,
-  //     },
-  //   });
-  // };
+  const handleChatPress = (chat: Chat) => {
+    router.push({
+      pathname: "/chat/[id]",
+      params: {
+        id: chat._id,
+        participantId: chat.participant._id,
+        name: chat.participant.name,
+        avatar: chat.participant.avatar,
+      },
+    });
+  };
 
   return (
     <View className="flex-1 bg-surface">
-      {/* <FlatList
+      <FlatList
         data={chats}
         keyExtractor={(item) => item._id}
         renderItem={({ item }) => (
@@ -78,7 +78,7 @@ const ChatsTab = () => {
             onPressButton={() => router.push("/new-chat")}
           />
         }
-      /> */}
+      />
     </View>
   );
 };
@@ -92,12 +92,12 @@ function Header() {
     <View className="px-5 pt-2 pb-4">
       <View className="flex-row items-center justify-between">
         <Text className="text-2xl font-bold text-foreground">Chats</Text>
-        {/* <Pressable
+        <Pressable
           className="size-10 bg-primary rounded-full items-center justify-center"
           onPress={() => router.push("/new-chat")}
         >
           <Ionicons name="create-outline" size={20} color="#0D0D0F" />
-        </Pressable> */}
+        </Pressable>
       </View>
     </View>
   );

@@ -2,16 +2,16 @@ import { Chat } from "@/types";
 import { Image } from "expo-image";
 import { View, Text, Pressable } from "react-native";
 import { formatDistanceToNow } from "date-fns";
-// import { useSocketStore } from "@/lib/socket";
+import { useSocketStore } from "@/lib/socket";
 
 const ChatItem = ({ chat, onPress }: { chat: Chat; onPress: () => void }) => {
   const participant = chat.participant;
 
-  // const { onlineUsers, typingUsers, unreadChats } = useSocketStore();
+  const { onlineUsers, typingUsers, unreadChats } = useSocketStore();
 
-  // const isOnline = onlineUsers.has(participant._id);
-  // const isTyping = typingUsers.get(chat._id) === participant._id;
-  // const hasUnread = unreadChats.has(chat._id);
+  const isOnline = onlineUsers.has(participant._id);
+  const isTyping = typingUsers.get(chat._id) === participant._id;
+  const hasUnread = unreadChats.has(chat._id);
 
   return (
     <Pressable
@@ -19,7 +19,7 @@ const ChatItem = ({ chat, onPress }: { chat: Chat; onPress: () => void }) => {
       onPress={onPress}
     >
       {/* --- avatar + online indicator --- */}
-      {/* <View className="relative">
+      <View className="relative">
         <Image
           source={participant.avatar}
           style={{ width: 56, height: 56, borderRadius: 999 }}
@@ -27,18 +27,18 @@ const ChatItem = ({ chat, onPress }: { chat: Chat; onPress: () => void }) => {
         {isOnline && (
           <View className="absolute bottom-0 right-0 size-4 bg-green-500 rounded-full border-[3px] border-surface" />
         )}
-      </View> */}
+      </View>
 
       {/* --- chat information --- */}
       <View className="flex-1 ml-4">
         <View className="flex-row items-center justify-between">
-          {/* <Text
+          <Text
             className={`text-base font-medium ${hasUnread ? "text-primary" : "text-foreground"}`}
           >
             {participant.name}
-          </Text> */}
+          </Text>
 
-          {/* <View className="flex-row items-center gap-2">
+          <View className="flex-row items-center gap-2">
             {hasUnread && (
               <View className="w-2.5 h-2.5 bg-primary rounded-full" />
             )}
@@ -49,10 +49,10 @@ const ChatItem = ({ chat, onPress }: { chat: Chat; onPress: () => void }) => {
                   })
                 : ""}
             </Text>
-          </View> */}
+          </View>
         </View>
 
-        {/* <View className="flex-row items-center justify-between mt-1">
+        <View className="flex-row items-center justify-between mt-1">
           {isTyping ? (
             <Text className="text-sm text-primary italic">typing...</Text>
           ) : (
@@ -63,7 +63,7 @@ const ChatItem = ({ chat, onPress }: { chat: Chat; onPress: () => void }) => {
               {chat.lastMessage?.text || "No messages yet"}
             </Text>
           )}
-        </View> */}
+        </View>
       </View>
     </Pressable>
   );

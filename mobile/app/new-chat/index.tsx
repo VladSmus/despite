@@ -22,7 +22,7 @@ const NewChatScreen = () => {
   const { data: allUsers, isLoading } = useUsers();
   const { mutate: getOrCreateChat, isPending: isCreatingChat } =
     useGetOrCreateChat();
-  // const { onlineUsers } = useSocketStore();
+  const { onlineUsers } = useSocketStore();
 
   // --- client-side filtering ---
   const users = allUsers?.filter((u) => {
@@ -121,7 +121,7 @@ const NewChatScreen = () => {
                   <UserItem
                     key={user._id}
                     user={user}
-                    isOnline={true} // <--- onlineUsers.has(user._id)
+                    isOnline={onlineUsers.has(user._id)} // <---
                     onPress={() => handleUserSelect(user)}
                   />
                 ))}
