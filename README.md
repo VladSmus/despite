@@ -38,6 +38,7 @@
 
 + Deploy app with Appwrite (https://appwrite.io/) or Sevalla (https://sevalla.com/)
 
++ DaisyUI - component library for Tailwind CSS (https://v4.daisyui.com/)
 
 ------------------------------------------------------------------
 
